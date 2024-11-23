@@ -1,0 +1,42 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  margin: 0;
+  padding: 0;
+}
+
+.wine-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 20px;
+}
+
+.wine-card {
+  width: 300px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.wine-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.wine-description {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.wine-rating {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #000000;
+}
