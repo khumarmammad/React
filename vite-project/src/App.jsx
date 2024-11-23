@@ -1,35 +1,55 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import React from "react";
+import "./App.css";
 
-function App() {
-  const [count, setCount] = useState(0)
-
+const Wine = ({ title, description, rating }) => {
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
-}
-
-export default App
+    <div className="wine-card">
+      <h2 className="wine-title">{title}</h2>
+      <p className="wine-description">{description}</p>
+      <p className="wine-rating">Rating: {rating}</p>
+    </div>
+  );
+};
+const App = () => {
+  return (
+    <div className="wine-list">
+      <Wine
+        title="Игристое вино Le Grand Noir Brut Reserve Rose"
+        description="Франция, розовое, 0.75 л."
+        rating="3.6"
+      />
+      <Wine
+        title="Игристое вино Prosecco Extra Dry"
+        description="Италия, белое, 0.75 л."
+        rating="4.2"
+      />
+      <Wine
+        title="Игристое вино Dom Perignon Vintage"
+        description="Франция, белое, 0.75 л."
+        rating="4.9"
+      />
+    </div>
+  );
+};
+const Button = () => {
+  // Click event handler
+  const handleClick = () => {
+    console.log("Button click!");
+  };
+  return (
+    <div className="button-container">
+      <button className="btn" onClick={handleClick}>
+        Click Me
+      </button>
+    </div>
+  );
+};
+const App = () => {
+  return (
+    <div className="app">
+      <h1>Click Button Example</h1>
+      <Button />
+    </div>
+  );
+};
+export default App;
